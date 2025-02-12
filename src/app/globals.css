@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --background: #f4f4f5
+  --foreground: #171717;
   --swiper-theme-color: #6b46c1;
   --swiper-navigation-size: 24px;
 }
@@ -32,4 +34,17 @@
 
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f4f4f5
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Lora', serif
 }

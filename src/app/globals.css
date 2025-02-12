@@ -2,49 +2,678 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #f4f4f5
-  --foreground: #171717;
-  --swiper-theme-color: #6b46c1;
-  --swiper-navigation-size: 24px;
+
+
+body { 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: white;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* .landing-nav {
+  background-color: rgba(88, 88, 88, 0.72);
+} */
+
+.landing-nav-links{
+  display: flex;
+  justify-content: center;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 16px !important;
-  font-weight: bold;
-  color: #1a1a1a;
+.landing-nav-links > span{
+  color: white;
 }
 
-.swiper-pagination-bullet {
-  width: 8px !important;
-  height: 8px !important;
-  background: #6b46c1 !important;
-  opacity: 0.5 !important;
+.link-underline{
+  text-decoration-thickness: 2px;
+  text-decoration: underline;
+  color: white;
 }
 
-.swiper-pagination-bullet-active {
-  opacity: 1 !important;
+.landing-nav-contact-us{
+  padding: 10px;
+  width: 200px;
+  background-color: black;
+  background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+  color: white;
+  border-radius: 25px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #f4f4f5
-    --foreground: #ededed;
+.feature-slides{
+  height: 350px;
+}
+
+.feature-1-card{
+  height: 350px;
+  border-radius: 20px !important;
+  
+}
+
+.feature-1-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire card area */
+  display: block;
+}
+
+.gradient-overlay {
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+}
+
+.gradient-overlay-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, #252525 100%);
+}
+
+.feature-1-card-header-button{
+  padding: 10px;
+  width: 200px;
+  background-color: black;
+  background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+  color: white;
+  border-radius: 25px;
+}
+
+.custom-swiper-slide{
+  width: 600px !important;
+}
+
+.swiper-pagination {
+  width: calc((100% - 50vw) * 2) !important;
+}
+
+.clients-contact-us{
+  padding: 10px;
+  width: 200px;
+  background-color: black;
+  background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+  color: white;
+  border-radius: 25px;
+}
+
+.clients-image{
+  width: 200px;
+}
+
+.landing-page-footer{
+  height: 300px;
+  background-color: black;
+  background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+}
+
+.landing-page-footer-content{
+  padding-top: 50px;
+  padding-right: 100px;
+  padding-left: 100px;
+  
+}
+
+ .swiper-nav-prev {
+  position: absolute;
+  top: calc(50% );
+  left: 0;
+  font-size: 14px;
+  padding: 15px 15px 15px 104px;
+  margin: 0;
+  z-index: 5;
+  cursor: pointer;
+  will-change: transform;
+  color: var(--cs-ca-color-08, #fff);
+  transform: translate(0px, -50%);
+}
+ .swiper-nav-prev::before {
+  position: absolute;
+  content: "";
+  right: 61px;
+  top: 28px;
+  width: 34px;
+  height: 1px;
+  background-color: var(--cs-ca-color-08, #fff);
+}
+ .swiper-nav-prev:hover {
+  transform: translate(18px, -50%);
+}
+ .swiper-nav-next {
+  position: absolute;
+  top: calc(50%);
+  right: 0;
+  font-size: 14px;
+  padding: 15px 104px 15px 15px;
+  margin: 0;
+  z-index: 5;
+  cursor: pointer;
+  will-change: transform;
+  color: var(--cs-ca-color-08, #fff);
+  transform: translate(0px, -50%);
+}
+ .swiper-nav-next::before {
+  position: absolute;
+  content: "";
+  left: 61px;
+  font-size: 14px;
+  top: 28px;
+  width: 34px;
+  height: 1px;
+  background-color: var(--cs-ca-color-08, #fff);
+}
+ .swiper-nav-next:hover {
+  transform: translate(-18px, -50%);
+}
+
+
+.offset-header {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  margin: 10px 0;
   }
+
+  span.offset-header {
+    display: block;
+    overflow: hidden;
+  }
+  span.offset-header > span {
+    animation-name: slideUp;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    display: block;
+  }
+  .offset-header-odd > span {
+    text-align: center;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+  .offset-header-even > span {
+    text-align: center;
+    animation-delay: 0ms;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideUp {
+    0%,
+    50% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+     
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    
+    }
+  }
+
+
+  .slider-1-button-1{
+    color: white;
+    border: 1px solid white;
+    width: 196px;
+    height: 48px;
+    border-radius: 25px;
+  }
+
+  .slider-1-button-1:hover{
+    color: white;
+    background-color: black;
+    background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+    border: 1px solid white;
+    width: 196px;
+    height: 48px;
+    border-radius: 25px;
+  }
+
+
+  .slider-1-button-2{
+    color: white;
+    background-color: black;
+    background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+    border: 1px solid white;
+    width: 196px;
+    height: 48px;
+    border-radius: 25px;
+  }
+
+  .slider-1-button-2:hover{
+    color: white;
+    border: 1px solid white;
+    width: 196px;
+    height: 48px;
+    border-radius: 25px;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+  
+  .card-description {
+    color: white;
+    font-size: 14px;
+    display: none;
+    margin: 10px 0 0;
+  }
+  
+  .feature-1-card:hover .card-content {
+    transform: translateY(-30px);
+  }
+  
+  .feature-1-card:hover .card-description {
+    display: block;
+  }
+
+  .testimonial-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+
+  
+  .testimonial-section img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the image stays behind the content */
+  }
+
+  .testimonial-swiper{
+    height: 500px;
+  }
+
+  .homecare-hero-section-card{
+    border-radius: 25px !important;
+    width: 400px;
+  }
+
+  .homecare-hero-section-card button{
+    width: 100%;
+    color: white;
+    background-color: black;
+    background-image: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.2) ,  transparent);
+    border: 1px solid white;
+    height: 48px;
+    border-radius: 25px;
+  }
+
+  .homecare-hero {
+    
+  }
+
+  .homecare-feature-swiper .swiper-pagination{
+    position: relative !important;
+  }
+
+  .homecare-feature-swiper .swiper-pagination .swiper-pagination-bullet{
+    display: inline-block;
+    border-radius: 0px;
+    height: 3px;
+    width: 50px;
+    text-align: center;
+  }
+
+  .homecare-feature-swiper .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: black;
+  }
+  
+  .homecare-feature-swiper-slide {
+    border-radius: 25px !important;
+    background-position: center;
+    background-size: cover;
+    
+  }
+
+  .homecare-card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .homecare-card-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+  
+  .homecare-card-description {
+    color: white;
+    font-size: 14px;
+    display: none;
+    margin: 10px 0 0;
+  }
+
+  .homecare-feature-swiper-slide:hover .homecare-card-content {
+    transform: translateY(-30px);
+  }
+  
+  .homecare-feature-swiper-slide:hover .homecare-card-description {
+    display: block;
+  }
+  
+  .homecare-feature-swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .homecare-voucher{
+    background: #EDEDED !important;
+
+  }
+
+  .homecare-feature-1 {
+    
+  }
+
+  .homecare-feature-1 .content{
+    margin-top: 50px;
+    position: absolute;
+  }
+
+  .homecare-feature-1 .content p{
+    margin-bottom: 0;
+  }
+
+  .homecare-feature-1 span{
+    display: inline-block;
+    border-radius: 0px;
+    height: 5px;
+    background: #AF8C3C;
+    width: 50px;
+    text-align: center;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+  }
+
+  .homecare-feature-1:hover span {
+    width: 100px; 
+  }
+
+  .homecare-how-it-works-cards{}
+
+  .homecare-how-it-works-cards p{
+    margin-bottom: 0;
+  }
+
+
+  .homecare-how-it-works-cards span{
+    display: inline-block;
+    border-radius: 0px;
+    height: 5px;
+    background: #AF8C3C;
+    width: 50px;
+    text-align: center;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+  }
+
+  .homecare-how-it-works-cards:hover span {
+    width: 100px; 
+  }
+
+  .homecare-plan{
+
+  }
+
+  .homecare-plan .homecare-plan-card{
+    background: #EDEDED;
+
+  }
+
+  .homecare-plan p{
+    margin-bottom: 0;
+  }
+
+  .homecare-plan ul{
+    height: 150px;
+  }
+
+  .homecare-plan button{
+    background: white;
+    border:solid 1px black;
+    border-radius: 25px;
+    padding: 6px;
+    width: 100px;
+  }  
+
+  .service-details{
+    
+  }
+
+  .service-details p{
+    
+    margin-bottom: 0;
+    color:white
+  }
+
+  .service-details span{
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background: white;
+  }
+
+  .service-details .content-3{
+    width: 350px;
+  }
+
+  .service-details-card{
+
+  }
+
+  .all-service{
+
+  }
+
+  .all-service .card-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+  }
+  
+  .all-service .card-description {
+    color: white;
+    font-size: 14px;
+    display: none;
+    margin: 10px 0 0;
+  }
+  
+  .all-service:hover .card-content {
+    transform: translateY(-30px);
+  }
+  
+  .all-service:hover .card-description {
+    display: block;
+  }
+
+  .circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: gray;
+    align-items: center;
+  }
+
+  .gte-title{
+    color: gray;
+  }
+
+  .gte-title-active{
+    color: white;
+  }
+
+  .rating {
+    font-size: 10px;
+    color:darkgoldenrod
+  }
+  
+  .rating-button {
+    margin-top: 8px;
+    width: 120px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 12px;
+    color:black
+  }
+
+  .physical-gym-training{   
+  
+  }
+
+  .physical-gym-training img{   
+    border-radius: 20px;
+  }
+  
+  .physical-gym-training button{
+    width: 150px;
+    padding: 5px;
+    height: 50px;
+    border: solid 1px black;
+    border-radius: 25px;
+  }
+
+  .service-listing{
+    width: 328;
+    height: 38;
+    top: 560px;
+    left: 555.5px;
+    gap: 8px;
+
+  }
+
+  .service-listing p{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+
+  .service-check-icon{
+    color: #C79B3C;
+
+  }
+
+  .service-banner-title{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+
+  .service-banner-description{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+   .nav-position-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;     
+    z-index: 20;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Lora', serif
+.landing-hero-content{
+  width: 901;
+  height: 232;
+  gap: 24px;
+
+}
+
+.landing-hero-title{
+  font-family: Lora;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 88px;
+  letter-spacing: -2%;
+  text-align: center;
+
+}
+
+.landing-hero-description{
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -2%;
+  text-align: center;
+
+}
+
+.landing-complimentary-header{
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -2%;
+}
+
+.landing-complimentary-card{
+  border-radius: 8px !important;
+}
+
+.landing-complimentary-card img{
+  border-radius: 8px;
+}
+
+.landing-page-plan-listing .header{
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 35.2px;
+  letter-spacing: -2%;
+
+}
+
+.landing-plan-list-card{
+  
+}
+
+.landing-plan-list-card:hover .card-content {
+  transform: translateY(-30px);
+}
+
+.landing-plan-list-card:hover .card-description {
+  display: block;
 }

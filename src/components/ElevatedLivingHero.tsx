@@ -8,9 +8,9 @@ export const ElevatedLivingHero: React.FC = () => {
     <section className="overflow-hidden text-center text-white bg-gray-200">
       <div className="flex relative flex-col justify-center items-center px-20 py-64 w-full min-h-[840px] max-md:px-5 max-md:py-24 max-md:max-w-full">
         <Image
+          priority
           width={100}
           height={100}
-          loading="lazy"
           src="/images/hero-image.png"
           alt="Luxury living background"
           className="object-cover absolute inset-0 size-full"

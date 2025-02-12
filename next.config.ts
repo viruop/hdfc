@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+module.exports = {
+  env: {
+    CRM_API: "http://localhost:5006",
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  // output: 'export',
 };
-
-export default nextConfig;

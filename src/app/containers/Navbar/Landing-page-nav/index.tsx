@@ -14,11 +14,31 @@ const LandingPageNav: React.FC = () => {
   };
   return (
     <header className="nav-position-fixed style-1">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <div>
-          <img src="Images/logo/HDFC-Premier Moment-Logo.png"></img>
+          <img
+            src="Images/logo/HDFC-Premier Moment-Logo.png"
+            alt="HDFC Premier Moment Logo"
+          />
         </div>
-        <div></div>
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
     </header>
   );

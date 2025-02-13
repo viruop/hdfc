@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
       <p className="mt-1.5 w-60 text-xs leading-5 text-zinc-800">
         ©All Copies and Logos of the bank belongs to HDFC Bank Ltd.
       </p>
-      <div className="text-center text-sm text-gray-600">
+      <div className="text-center py-2 text-sm text-gray-600">
         Powered by Europ Assistance India Pvt. Ltd.
       </div>
     </footer>

@@ -84,28 +84,29 @@ export default function Page() {
   return (
     <div className="overflow-hidden">
       <HeroSection
-        title="Exclusive services for a select few"
-        backgroundImage="/Images/imperia/hero-image.png"
+        title="Welcome to a world of infinite privileges"
+        backgroundImage="/Images/infiniti/hero-image.png"
       />
       <UniquePrivileges
         title="Unveiling Your Unique Privileges"
         services={services}
-        backgroundColor="bg-rose-900 bg-opacity-10"
-        textColor="text-rose-900"
+        backgroundColor="bg-[#52286A] bg-opacity-10"
+        textColor="text-[#52286A]"
         buttonText="Discover More"
+        buttonClassName="overflow-hidden gap-3 self-center px-10 py-4 mt-8 text-xl font-medium leading-tight text-center text-[#52286A] border-2 border-solid border-[#52286A] rounded-[32px] max-md:px-5"
       />
       <Prefences
         services={prefServices}
         headerText="Inspired by Your Preferences"
         buttonText="Explore All Tailored Services"
-        backgroundColor="bg-rose-900"
+        backgroundColor="bg-[#52286A]"
         headerTextColor="text-white"
       />
       <ConciergeServices
         services={conservices}
         title="Your Concierge Services, Redefined"
-        backgroundColor="bg-rose-900 bg-opacity-10"
-        titleColor="text-rose-900"
+        backgroundColor="bg-[#52286A] bg-opacity-10"
+        titleColor="text-[#52286A]"
         buttonText="Discover More"
       />
       <ExclusiveOffers
@@ -113,7 +114,7 @@ export default function Page() {
         headerText="Exclusive Offers Just For You"
         // Optional props
         buttonText="Discover More"
-        backgroundColor="bg-rose-900"
+        backgroundColor="bg-[#52286A]"
         headerTextColor="text-white"
       />
       <GiftsSection />

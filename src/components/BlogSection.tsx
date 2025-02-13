@@ -10,7 +10,7 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ image, title, description }) => {
   return (
-    <article className="grow shrink self-stretch my-auto min-w-60 w-[394px] max-md:max-w-full">
+    <article className="grow shrink self-stretch my-auto min-w-60 md:w-[394px] max-md:max-w-full">
       <figure className="w-full max-md:max-w-full">
         <img
           loading="lazy"
@@ -55,7 +55,7 @@ const BlogSection = () => {
     <section className="flex flex-col items-center py-20 ">
       <header className="w-full max-w-[1015px] text-center">
         <h2 className="text-4xl font-semibold tracking-tighter leading-none text-purple-900">
-          Gifts as Unique as You
+          Your Exclusive Guide to Luxe Living
         </h2>
       </header>
       <div className="flex flex-col px-20 mt-6 w-full max-md:px-5 max-md:max-w-full">

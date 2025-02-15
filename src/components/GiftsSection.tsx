@@ -42,7 +42,11 @@ const GiftCard: React.FC<GiftCardProps> = ({
 const GiftsSection = () => {
   return (
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-16 bg-stone-200  max-md:px-5">
-      <Header text="Gifts as Unique as You" textColor="text-purple-900" />
+      <Header
+        text="Gifts as Unique as You"
+        showButtons
+        textColor="text-purple-900"
+      />
       <div className="max-md:max-w-full">
         <div className="flex pt-4 gap-5 max-md:flex-col">
           <GiftCard

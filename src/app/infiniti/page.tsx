@@ -4,7 +4,8 @@ import ExclusiveOffers from "@/components/ExclusiveOffers";
 import HeroSection from "@/components/ExclusiveServices";
 import ExclusiveServices from "@/components/ExclusiveServices";
 import GiftsSection from "@/components/GiftsSection";
-import Prefences from "@/components/Prefences";
+import Preferences from "@/components/Preferences";
+import Prefences from "@/components/Preferences";
 import UniquePrivileges from "@/components/UniquePrivileges";
 
 export default function Page() {
@@ -95,7 +96,7 @@ export default function Page() {
         buttonText="Discover More"
         buttonClassName="overflow-hidden gap-3 self-center px-10 py-4 mt-8 text-xl font-medium leading-tight text-center text-[#52286A] border-2 border-solid border-[#52286A] rounded-[32px] max-md:px-5"
       />
-      <Prefences
+      <Preferences
         services={prefServices}
         headerText="Inspired by Your Preferences"
         buttonText="Explore All Tailored Services"
